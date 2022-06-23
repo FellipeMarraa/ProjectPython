@@ -1,7 +1,13 @@
 import speech_recognition as sr
 import webbrowser
+import pyttsx3
 
-print('OLÁ, DESEJA FINALIZAR A APRESENTAÇÃO?')
+en = pyttsx3.init()
+en.say('DESEJA FINALIZAR A APRESENTAÇÃO?')
+en.setProperty('voice', b'brasil')
+en.setProperty('rate', 140)
+en.setProperty('volume', 1)
+en.runAndWait()
 
 recon = sr.Recognizer()
 
